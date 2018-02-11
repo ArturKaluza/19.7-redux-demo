@@ -12,20 +12,29 @@ function addComment(text) {
 
 const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
 
-function thumbUpComment(commentId) {
+function thumbUpComment(id) {
   return {
     type: THUMB_UP_COMMENT,
-    id: commentId
+    id: id
   }
 };
 
 const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
 
-function thumbDownComment(commentId) {
+function thumbDownComment(id) {
   return {
     type: THUMB_DOWN_COMMENT,
-    id: commentId
+    id: id
   }
 };
 
-export {ADD_COMMENT, addComment, THUMB_UP_COMMENT, thumbUpComment, THUMB_DOWN_COMMENT, thumbDownComment};
+const REMOVE_COMMENT = 'REMOVE_COMMENT';
+
+function removeComment(id) {
+  return {
+    type: REMOVE_COMMENT,
+    id: id
+  };
+};
+
+export {ADD_COMMENT, addComment, THUMB_UP_COMMENT, thumbUpComment, THUMB_DOWN_COMMENT, thumbDownComment, REMOVE_COMMENT, removeComment};
