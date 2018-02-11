@@ -1,12 +1,18 @@
 import React from 'react';
 import { removeComment } from './actions';
+import './styles/Comment.css';
 
 const Comment = ({text, votes, id, thumbUpComment, thumbDownComment, removeComment}) =>
-  <li>
-    {text} <span>votes: {votes}</span> 
-    <button onClick={() => thumbUpComment(id)}>Thumb up</button>
-    <button onClick={() => thumbDownComment(id)}>Thumb Down</button>
-    <button onClick={() => removeComment(id)}>X</button>
+  <li className="Comment">
+    <div className="text">
+      <p>{text}</p>
+    </div>
+    <div> 
+      <span className="votes">votes: {votes}</span>
+      <button className="btn" onClick={() => thumbUpComment(id)}>Thumb up</button>
+      <button className="btn" onClick={() => thumbDownComment(id)}>Thumb Down</button>
+      <button className="btn btn--remove" onClick={() => removeComment(id)}>X</button>
+    </div>
   </li>;
 
 export default Comment;
