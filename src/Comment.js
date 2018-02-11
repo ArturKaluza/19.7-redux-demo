@@ -1,5 +1,4 @@
 import React from 'react';
-import { removeComment } from './actions';
 import './styles/Comment.css';
 
 const Comment = ({text, votes, id, thumbUpComment, thumbDownComment, removeComment}) =>

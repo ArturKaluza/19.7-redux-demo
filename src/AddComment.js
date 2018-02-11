@@ -1,6 +1,6 @@
 import React from 'react';
 import { addComment } from './actions';
-import store from './index.js';
+import store from './store';
 import './styles/AddComment.css'
 
 class AddComment extends React.Component {
